@@ -28,9 +28,19 @@ function Characters() {
     navigate(`/info/${ character.target.id }`);
   }
 
+  const sort = () => {
+    const sortedArray = [...characters].sort((a, b) => a.name - b.name);
+    console.log(sortedArray);
+  }
+
   return (
     <section>
-      <h2>Characters:</h2>
+      <div className='flex'>
+        <h2>Characters</h2>
+        <div className='buttons'>
+          <button name='sort' className='sort' onClick={ sort }>Sort</button>
+        </div>
+      </div>
       <div className='grid'>
         {characters.map(character => (
           <div key={ character.id } className='characters'>
@@ -43,10 +53,6 @@ function Characters() {
                 onClick={ handleClick }
               />
             </figure>
-            <div className='details'>
-              <p>{ character.species }</p>
-              <p>{ character.gender }</p>
-            </div>
           </div>
         ))}
       </div>

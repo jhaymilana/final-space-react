@@ -1,17 +1,19 @@
-import { Component } from 'react';
+import { useNavigate } from "react-router-dom";
 
-class Header extends Component {
-  render() {
-    const { title } = this.props;
-
-    return (
-      <header>
-        <div className='container flexbox'>
-          <h1>{title}</h1>
-        </div>
-      </header>
-    )
+function Header() {
+  const navigate = useNavigate();
+  const form = () => {
+    navigate(`/form`);
   }
+
+  return (
+    <header>
+      <div className='container flexbox'>
+        <h1>Final Space</h1>
+        <p onClick={ form }>Add Character</p>
+      </div>
+    </header>
+  )
 }
 
 export default Header;

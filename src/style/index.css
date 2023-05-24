@@ -24,6 +24,9 @@ body {
   --app-blue-hover: #025fee;
   --app-white: #fff;
   --app-gray: #c1c1c4;
+  --app-green: #82c55b;
+  --app-green-hover: #4A9833;
+  --app-error: #FF9494;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -45,11 +48,11 @@ header {
 
 .flexbox h1 {
   line-height: 56px;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
   letter-spacing: 0.5px;
   word-spacing: 2.5px;
-  color: var(--app-white);
+  color: var(--app-green);
 }
 
 .flexbox p {
@@ -61,21 +64,34 @@ header {
   color: var(--app-white);
 }
 
+header p:hover {
+  transition: all 0.3s ease-in-out;
+  color: var(--app-green);
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Main
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 section {
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 h2 {
   font-size: 30px;
+  line-height: 35px;
+  font-weight: 400;
   color: var(--app-white);
+}
+
+section .flex h2 {
+  font-weight: 700;
 }
 
 .grid {
   display: grid;
+  width: 100%;
+  margin-top: 15px;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   padding-bottom: 60px;
@@ -88,10 +104,8 @@ h2 {
   color: var(--app-white);
 }
 
-.details {
-  display: grid;
-  place-items: center;
-  color: var(--app-gray);
+.grid h2 {
+  font-size: 24px;
 }
 
 .characters img, .details {
@@ -102,11 +116,44 @@ h2 {
   cursor: pointer;
 }
 
+section .flex {
+  justify-content: space-between;
+}
+
+button {
+  margin-left: 10px;
+  padding: 0 15px;
+  font-size: 18px;
+  line-height: 35px;
+  border-radius: 8px;
+}
+
+.sort {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+  color: var(--app-white);
+  background-color: var(--app-blue);
+}
+
+.sort:hover {
+  background-color: var(--app-blue-hover);
+}
+
+.add {
+  color: var(--app-white);
+  background-color: var(--app-green);
+}
+
+.add:hover {
+  background-color: var(--app-green-hover);
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* Info Components
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-.info {
+.info, .error-page, .form-page {
   display: grid;
   place-items: center;
   height: calc(100vh - 56px - 60px);
@@ -114,6 +161,10 @@ h2 {
 
 .flex {
   display: flex;
+}
+
+.error-page .flex {
+  justify-content: space-between;
 }
 
 .info h2 {
@@ -133,17 +184,96 @@ h2 {
 }
 
 .box div p {
+  margin-top: 20px;
   font-size: 18px;
   line-height: 18px;
   color: var(--app-gray);
 }
 
 .box p + p {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 span {
   font-weight: 600;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Form
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.form {
+  padding: 40px 35px;
+  background-color: var(--app-header-footer);
+  border-radius: 5px;
+}
+
+form {
+  margin-top: 30px;
+  display: block;
+  text-align: right;
+  width: 300px;
+}
+
+input {
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 0 15px;
+  border-radius: 5px;
+  color: var(--app-white);
+  background-color: var(--app-shadow);
+}
+
+input[type=submit] {
+  display: block;
+  margin-left: 193px;
+  margin-top: 30px;
+  width: 35%;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--app-white);
+  background-color: var(--app-green);
+}
+
+input[type=submit]:hover {
+  background-color: var(--app-green-hover);
+}
+
+input + input {
+  margin-top: 25px;
+}
+
+form span {
+  color: var(--app-error);
+  height: 18  px;
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Error Page
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.error-page {
+  display: flex;
+}
+
+.error-page h2 {
+  font-size: 50px;
+  line-height: 50px;
+  color: var(--app-white);
+}
+
+.error-page p {
+  margin-top: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--app-gray);
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
