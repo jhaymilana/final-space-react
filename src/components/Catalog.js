@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-function Characters() {
+function Catalog() {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -60,4 +60,4 @@ function Characters() {
   )
 }
 
-export default Characters;
+export default Catalog;
