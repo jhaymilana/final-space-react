@@ -28,9 +28,10 @@ function Catalog() {
     navigate(`/info/${ character.target.id }`);
   }
 
-  const sort = () => {
-    const sortedArray = [...characters].sort((a, b) => a.name - b.name);
-    console.log(sortedArray);
+  const sortCharacters = () => {
+    const sortedArray = [...characters];
+    const list = sortedArray.sort((a, b) => a.name - b.name);
+    console.log(list);  
   }
 
   return (
@@ -38,7 +39,7 @@ function Catalog() {
       <div className='flex'>
         <h2>Characters</h2>
         <div className='buttons'>
-          <button name='sort' className='sort' onClick={ sort }>Sort</button>
+          <button name='sort' className='sort' onClick={ sortCharacters }>Sort</button>
         </div>
       </div>
       <div className='grid'>

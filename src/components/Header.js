@@ -6,11 +6,18 @@ function Header() {
     navigate(`/form`);
   }
 
+  const home = () => {
+    navigate(`/`);
+  }
+
   return (
     <header>
       <div className='container flexbox'>
         <h1>Final Space</h1>
-        <p onClick={ form }>Add Character</p>
+        <div className='links'>
+          <p onClick={ home }>Home </p>
+          <p onClick={ form }>Add Character</p>
+        </div>
       </div>
     </header>
   )

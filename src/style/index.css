@@ -56,12 +56,17 @@ header {
 }
 
 .flexbox p {
+  margin-left: 30px;
   line-height: 56px;
   font-size: 17px;
   font-weight: 400;
   letter-spacing: 0.5px;
   word-spacing: 2.5px;
   color: var(--app-white);
+}
+
+.links {
+  display: flex;
 }
 
 header p:hover {
@@ -133,19 +138,10 @@ button {
   letter-spacing: 0.8px;
   font-weight: 600;
   color: var(--app-white);
-  background-color: var(--app-blue);
-}
-
-.sort:hover {
-  background-color: var(--app-blue-hover);
-}
-
-.add {
-  color: var(--app-white);
   background-color: var(--app-green);
 }
 
-.add:hover {
+.sort:hover {
   background-color: var(--app-green-hover);
 }
 
@@ -161,10 +157,6 @@ button {
 
 .flex {
   display: flex;
-}
-
-.error-page .flex {
-  justify-content: space-between;
 }
 
 .info h2 {
@@ -260,7 +252,13 @@ form span {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 .error-page {
+  display: grid;
+  place-items: center;
+}
+
+.flex {
   display: flex;
+  justify-content: space-between;
 }
 
 .error-page h2 {
@@ -274,6 +272,25 @@ form span {
   font-size: 30px;
   line-height: 30px;
   color: var(--app-gray);
+}
+
+.error-page button {
+  margin-left: 0;
+  margin-top: 20px;
+  color: var(--app-white);
+  background-color: var(--app-green);
+}
+
+.error-page button:hover {
+  background-color: var(--app-green-hover);
+}
+
+.error-msg {
+  margin-top: 10%;
+}
+
+.error-image {
+  margin-left: 50px;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
