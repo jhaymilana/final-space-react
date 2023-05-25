@@ -1,7 +1,7 @@
 {
   "name": "valorant-agent-react",
   "version": "0.1.0",
-  "hompage": "  https://jhaymilana.github.io/valorant-agents-react",
+  "hompage": "  https://jhaymilana.github.io/final-space-react",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
