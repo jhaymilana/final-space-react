@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form';
+import { Helmet } from 'react-helmet';
 
 function Form() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -7,6 +8,9 @@ function Form() {
 
   return (
     <div className='form-page'>
+      <Helmet>
+        <title>Add a Character</title>
+      </Helmet>
       <div className='form'>
         <h2>Add a Character</h2>
         <form onSubmit={handleSubmit(onSubmit)}>

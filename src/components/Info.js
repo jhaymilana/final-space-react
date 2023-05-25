@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Info() {
   const { characterID } = useParams();
@@ -23,6 +24,9 @@ function Info() {
 
   return (
     <div className='info'>
+      <Helmet>
+        <title>{character.name}</title>
+      </Helmet>
       <div className='flex'>
         <figure>
           <img 
@@ -38,6 +42,7 @@ function Info() {
             <p><span>Gender:</span> { character.gender }</p>
             <p><span>Status:</span> { character.status }</p>
             <p><span>Origin:</span> { character.origin }</p>
+            <button className='fake'>Search on Wiki</button>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 function Error404() {
   const navigate = useNavigate();
@@ -8,6 +9,9 @@ function Error404() {
 
   return (
     <div className='error-page'>
+      <Helmet>
+        <title>Error 404</title>
+      </Helmet>
       <div className='flex'>
         <div className='error-msg'>
           <h2>Ooops!</h2>

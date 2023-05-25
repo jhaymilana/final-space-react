@@ -29,9 +29,9 @@ function Catalog() {
   }
 
   const sortCharacters = () => {
-    const sortedArray = [...characters];
-    const list = sortedArray.sort((a, b) => a.name - b.name);
-    console.log(list);  
+    const newArray = [...characters].sort((a, b) =>
+    a.name.localeCompare(b.name));
+    setCharacters(newArray);
   }
 
   return (

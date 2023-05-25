@@ -167,12 +167,8 @@ button {
 }
 
 .box {
-  margin-left: 20px;
+  margin-left: 50px;
   padding: 20px;
-}
-
-.box div {
-  margin-left: 20px;
 }
 
 .box div p {
@@ -188,6 +184,18 @@ button {
 
 span {
   font-weight: 600;
+}
+
+.fake {
+  margin-left: 0px;
+  margin-top: 30px;
+  color: var(--app-white);
+  background-color: var(--app-green);
+  transition: all 0.3s ease-in-out;
+}
+
+.fake:hover {
+  background-color: var(--app-green-hover);
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -308,7 +316,7 @@ footer h2 {
   font-weight: 600;
   letter-spacing: 0.5px;
   word-spacing: 2.5px;
-  color: var(--app-white);
+  color: var(--app-green);
 }
 
 footer p {
